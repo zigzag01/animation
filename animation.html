@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>animation</title>
+    <style>
+        *{
+            margin: 0;
+            box-sizing: border-box;
+        }
+
+        body{
+            height: 100vh;
+            background-color: grey;
+            overflow: hidden; /* убирает прокрутку внизу окна */
+        }
+        .circle{
+            width: 200px;
+            height: 200px;
+            background-color: burlywood;
+            border-radius: 50%;
+            position: absolute;
+            top: 400px;
+            left: 0;
+
+            animation-name: move; /* задаем имя анимации */
+            animation-duration: 3s; /* время выполнения анимации */
+            animation-timing-function: linear; /* ease */
+            animation-iteration-count: infinite; /* кол-во повторений */
+            /* animation-direction: normal; */
+            animation-delay: 0; /* задержка перед началом анимации */
+            animation-fill-mode: forwards; /* св-ва элемента в конце анимации */
+        }
+        @keyframes move { /* анимация для .. */
+
+            /* from{
+                left: 0; 
+                background-color: burlywood;
+                width: 200px;
+                height: 200px;
+            }
+            to{
+                left: 110vw; 
+                background-color: darkcyan;
+                width: 400px;
+                height: 400px;
+            } */
+            
+            0%{
+                left: 0; 
+                background-color: burlywood;
+                top: 400px;
+                width: 200px;
+                height: 200px;
+            }
+            30%{
+                top: 0px;
+                background-color: darkolivegreen;
+                left: 40vw;
+            }
+            60%{
+                top: 90vh;
+                background-color: lightcoral;
+                left: 40vw;
+            }
+            100%{
+                left: 110vw; 
+                background-color:lightgreen;
+                top: 400px;
+                width: 200px;
+                height: 200px;
+                border-radius: 0%;
+            }
+        }
+        /* .circle:hover{
+            animation-play-state: paused;
+        } */
+    </style>
+</head>
+<body>
+    
+<div class="circle"></div>
+
+</body>
+</html>
